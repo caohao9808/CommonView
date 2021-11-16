@@ -4,6 +4,19 @@ plugins {
     id 'maven-publish'
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'org.fengye.commonview'
+                artifactId = 'libview'
+                version = '0.0.9'
+            }
+        }
+    }
+}
+
 android {
     compileSdk 31
 
