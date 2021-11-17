@@ -8,9 +8,9 @@
     </data>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
         <org.fengye.commonview.lib.scrollpicker.ScrollPickerView
@@ -23,10 +23,23 @@
 
         <org.fengye.commonview.lib.starview.StarView
             android:id="@+id/star"
+            starViewMark="@{4.6f}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:starClickable="false"
             app:starsNum="5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="toast" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading" />
 
     </LinearLayout>
 </layout>
