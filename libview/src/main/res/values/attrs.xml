@@ -38,7 +38,6 @@
         <attr name="starDrawBackground" format="reference" />
         <!--        //控件是否可以点击-->
         <attr name="starClickable" format="boolean" />
-
     </declare-styleable>
 
 
