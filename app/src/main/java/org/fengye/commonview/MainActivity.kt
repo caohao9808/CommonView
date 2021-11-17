@@ -2,6 +2,7 @@ package org.fengye.commonview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.whenCreated
 import kotlinx.coroutines.delay
@@ -12,17 +13,13 @@ import org.fengye.commonview.lib.base.IBaseUI
 import org.fengye.commonview.lib.scrollpicker.DatePickerAdapter
 import org.fengye.commonview.lib.scrollpicker.PickAdapter
 
-class MainActivity(
-    private val baseUI: BaseUI = BaseUI(),
-) : AppCompatActivity(), IBaseUI by baseUI {
+class MainActivity : AppCompatActivity(), IBaseUI by BaseUI() {
 
-    init {
-        baseUI.init(this)
-    }
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initBaseUI(this)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -30,6 +27,10 @@ class MainActivity(
         binding.yearPicker.setAdapter(DatePickerAdapter(1, 10))
         binding.toast.setOnClickListener {
             toast("toast")
+        }
+
+        supportFragmentManager.commit {
+            replace(R.id.container, BlankFragment.newInstance())
         }
 
         binding.loading.setOnClickListener {

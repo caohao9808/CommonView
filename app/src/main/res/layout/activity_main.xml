@@ -41,5 +41,44 @@
             android:layout_height="wrap_content"
             android:text="loading" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <org.fengye.commonview.lib.ratiolayout.widget.RatioImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="#D32F2F"
+                app:datumRatio="datumHeight"
+                app:layoutAspectRatio="2"
+                app:radius="20dp" />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="100dp"
+                android:layout_height="0dp" />
+
+            <org.fengye.commonview.lib.ratiolayout.widget.RatioFrameLayout
+                android:layout_width="128dp"
+                android:layout_height="match_parent"
+                android:background="#1976D2"
+                app:datumRatio="datumWidth"
+                app:layoutAspectRatio="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="2:1"
+                    android:textColor="@color/white" />
+            </org.fengye.commonview.lib.ratiolayout.widget.RatioFrameLayout>
+
+        </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
     </LinearLayout>
 </layout>

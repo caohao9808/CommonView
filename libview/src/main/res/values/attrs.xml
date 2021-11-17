@@ -41,4 +41,46 @@
     </declare-styleable>
 
 
+    <!-- 宽高比控件基本自定义属性-->
+    <declare-styleable name="ViewSizeCalculate">
+        <!-- 设置宽度的视图比例大小 -->
+        <attr name="widthRatio" format="float" />
+        <!-- 设置视图比例高度的大小 -->
+        <attr name="heightRatio" format="float" />
+        <!-- 设置正方形的视图比例大小 -->
+        <attr name="layoutSquare" format="boolean" />
+        <!-- 设置纵横比的显示比例大小 -->
+        <attr name="layoutAspectRatio" format="float" />
+        <!-- 设置模式的视图比例大小 -->
+        <attr name="datumRatio">
+            <enum name="datumAuto" value="0" />
+            <enum name="datumWidth" value="1" />
+            <enum name="datumHeight" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!-- RatioFrameLayout -->
+    <declare-styleable name="RatioFrameLayout" parent="ViewSizeCalculate">
+        <attr name="widthRatio"/>
+        <attr name="heightRatio"/>
+        <attr name="datumRatio"/>
+        <attr name="layoutSquare"/>
+        <attr name="layoutAspectRatio"/>
+    </declare-styleable>
+
+    <!-- RatioImageView -->
+    <declare-styleable name="RatioImageView" parent="ViewSizeCalculate">
+        <attr name="widthRatio" />
+        <attr name="heightRatio" />
+        <attr name="datumRatio" />
+        <attr name="layoutSquare" />
+        <attr name="layoutAspectRatio" />
+
+        <attr name="radius" format="dimension" />
+        <attr name="left_top_radius" format="dimension" />
+        <attr name="right_top_radius" format="dimension" />
+        <attr name="right_bottom_radius" format="dimension" />
+        <attr name="left_bottom_radius" format="dimension" />
+
+    </declare-styleable>
 </resources>

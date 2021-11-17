@@ -1,6 +1,7 @@
 package org.fengye.commonview.lib.base
 
 import android.content.Context
+import androidx.fragment.app.FragmentActivity
 import com.hjq.toast.ToastUtils
 import com.hjq.toast.style.BlackToastStyle
 import org.fengye.commonview.lib.dialog.BubbleDialog
@@ -11,11 +12,13 @@ class BaseUI() : IBaseUI {
 
     private var bubbleDialog: BubbleDialog? = null
 
-    fun init(mContext: Context) {
-        this.mContext = mContext
+    override fun initBaseUI(mActivity: FragmentActivity) {
+        super.initBaseUI(mActivity)
+        this.mContext = mActivity
     }
 
     override fun showLoading(title: String) {
+
         if (bubbleDialog == null) {
             bubbleDialog = BubbleDialog(mContext, title)
         } else {
