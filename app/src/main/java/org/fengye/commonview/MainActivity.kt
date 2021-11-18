@@ -43,5 +43,21 @@ class MainActivity : AppCompatActivity(), IBaseUI by BaseUI() {
             }
         }
 
+        binding.codeBtn.setNormalText("获取验证码")
+            .setCountDownText("", "")
+            .setCloseKeepCountDown(true)//关闭页面保持倒计时开关
+            .setCountDownClickable(false)//倒计时期间点击事件是否生效开关
+            .setShowFormatTime(true)//是否格式化时间
+            .setOnClickListener {
+                lifecycleScope.launch {
+                    showLoading()
+                    delay(1000)
+                    hideLoading()
+                    toast("发送成功")
+                    binding.codeBtn.startCountDown(59)
+                }
+
+            }
+
     }
 }
