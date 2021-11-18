@@ -15,7 +15,6 @@ import org.fengye.commonview.lib.scrollpicker.PickAdapter
 
 class MainActivity : AppCompatActivity(), IBaseUI by BaseUI() {
 
-
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

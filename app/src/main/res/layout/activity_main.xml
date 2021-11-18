@@ -26,39 +26,44 @@
             starViewMark="@{4.6f}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:starClickable="false"
+            android:layout_gravity="center"
+            app:starClickable="true"
+            app:starHeight="36dp"
+            app:starWidth="36dp"
             app:starsNum="5" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/toast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="toast" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="loading" />
 
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/toast"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="toast" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/loading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="loading" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <org.fengye.commonview.lib.ratiolayout.widget.RatioImageView
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:src="#D32F2F"
+                android:layout_height="36dp"
+                android:src="#388E3C"
                 app:datumRatio="datumHeight"
-                app:layoutAspectRatio="2"
+                app:layoutSquare="true"
                 app:radius="20dp" />
 
 
@@ -66,7 +71,7 @@
                 android:layout_width="88dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="12dp"
-                android:background="#1976D2"
+                android:background="#039BE5"
                 app:datumRatio="datumWidth"
                 app:layoutAspectRatio="2">
 
@@ -74,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="2:1"
+                    android:text="比例 2:1"
                     android:textColor="@color/white" />
             </org.fengye.commonview.lib.ratiolayout.widget.RatioFrameLayout>
 

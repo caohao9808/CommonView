@@ -11,32 +11,31 @@ class BaseFragmentUI() : IBaseUI {
 
     private lateinit var mActivity: FragmentActivity
 
+    private val baseUI: IBaseUI?
+        get() =
+            if (mActivity is IBaseUI)
+                mActivity as IBaseUI
+            else
+                null
+
     override fun initBaseUI(mActivity: FragmentActivity) {
         super.initBaseUI(mActivity)
         this.mActivity = mActivity
     }
 
     override fun showLoading(title: String) {
-        if (mActivity is IBaseUI) {
-            (mActivity as IBaseUI).showLoading(title)
-        }
+        baseUI?.showLoading(title)
     }
 
     override fun updateLoading(title: String?) {
-        if (mActivity is IBaseUI) {
-            (mActivity as IBaseUI).updateLoading(title)
-        }
+        baseUI?.updateLoading(title)
     }
 
     override fun hideLoading() {
-        if (mActivity is IBaseUI) {
-            (mActivity as IBaseUI).hideLoading()
-        }
+        baseUI?.hideLoading()
     }
 
     override fun toast(msg: String?) {
-        if (mActivity is IBaseUI) {
-            (mActivity as IBaseUI).toast(msg)
-        }
+        baseUI?.toast(msg)
     }
 }
