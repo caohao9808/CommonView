@@ -49,6 +49,15 @@
                 android:layout_height="wrap_content"
                 android:text="loading" />
 
+            <org.fengye.commonview.lib.texticon.TextIconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="文字icon"
+                app:icon="@drawable/ic_star"
+                app:iconHeight="24dp"
+                app:iconPosition="top"
+                app:iconWidth="24dp" />
+
         </LinearLayout>
 
 
