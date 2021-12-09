@@ -44,9 +44,13 @@ class BaseUI() : IBaseUI {
         }
     }
 
-    override fun toast(msg: String?) {
-        ToastUtils.setStyle(BlackToastStyle())
+
+    override fun toast(msg: String?, layoutRes: Int?) {
+        if (layoutRes != null) {
+            ToastUtils.setView(layoutRes)
+        } else {
+            ToastUtils.setStyle(BlackToastStyle())
+        }
         ToastUtils.show(msg)
     }
-
 }

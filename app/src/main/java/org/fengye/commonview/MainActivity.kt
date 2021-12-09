@@ -55,8 +55,6 @@ class MainActivity : AppCompatActivity(), IBaseUI by BaseUI() {
                     toast("发送成功")
                     binding.codeBtn.startCountDown(59)
                 }
-
             }
-
     }
 }

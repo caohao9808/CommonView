@@ -35,7 +35,7 @@ class BaseFragmentUI() : IBaseUI {
         baseUI?.hideLoading()
     }
 
-    override fun toast(msg: String?) {
-        baseUI?.toast(msg)
+    override fun toast(msg: String?, layoutRes: Int?) {
+        baseUI?.toast(msg, layoutRes)
     }
 }

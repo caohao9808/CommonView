@@ -1,6 +1,7 @@
 package org.fengye.commonview.lib.base
 
 import android.content.Context
+import androidx.annotation.LayoutRes
 import androidx.fragment.app.FragmentActivity
 
 interface IBaseUI {
@@ -15,5 +16,5 @@ interface IBaseUI {
 
     fun hideLoading()
 
-    fun toast(msg: String?)
+    fun toast(msg: String?, @LayoutRes layoutRes: Int? = null)
 }
