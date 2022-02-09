@@ -18,7 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             app:scrollPicker_gravity="17"
-            app:scrollPicker_loop="false" />
+            app:scrollPicker_loop="false"
+            app:scrollPicker_textColor_center="#333333"
+            app:scrollPicker_textColor_outside="#999999" />
 
 
         <org.fengye.commonview.lib.starview.StarView
