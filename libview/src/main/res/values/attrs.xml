@@ -4,9 +4,9 @@
         <!--行数-->
         <attr name="scrollPicker_rows" format="integer" />
         <!--行间距-->
-        <attr name="scrollPicker_spacing" format="float" />
+        <attr name="scrollPicker_spacing" format="dimension" />
         <!--字体大小-->
-        <attr name="scrollPicker_textSize" format="float" />
+        <attr name="scrollPicker_textSize" format="dimension" />
         <!--字体格式，宽度为wrap_content时用于计算宽度-->
         <attr name="scrollPicker_textFormat" format="string" />
         <!--字体放大倍数-->

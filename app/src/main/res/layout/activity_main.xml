@@ -14,14 +14,17 @@
         tools:context=".MainActivity">
 
         <org.fengye.commonview.lib.scrollpicker.ScrollPickerView
-            android:id="@+id/year_picker"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:id="@+id/yearPicker"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             app:scrollPicker_gravity="17"
             app:scrollPicker_loop="false"
+            app:scrollPicker_spacing="20dp"
             app:scrollPicker_textColor_center="#333333"
-            app:scrollPicker_textColor_outside="#999999" />
-
+            app:scrollPicker_textColor_outside="#999999"
+            app:scrollPicker_textRatio="1.25"
+            app:scrollPicker_textSize="16sp" />
 
         <org.fengye.commonview.lib.starview.StarView
             android:id="@+id/star"
